@@ -1,0 +1,29 @@
+#footer{
+    display: flex;
+    flex-direction: row;
+    height: 7vh;
+    justify-content: space-evenly;
+    background-color: black
+}
+
+#footer *{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 567px){
+    #footer{
+        flex-direction: column;
+        text-align: center;
+        height: 10vh;
+    }
+
+    #footer a{
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+
+    #footer a:last-child{
+        margin-bottom: 0;
+    }
+}

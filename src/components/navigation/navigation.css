@@ -1,0 +1,34 @@
+#navigation {
+    display: flex;
+    flex-direction: row;
+    height: 5vh !important;
+    color: white;
+    background-color: black;
+}
+
+#navigation ul{
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-bottom: 0;
+    text-align: center;
+    align-items: center;
+}
+
+#navigation li{
+    display: block;
+}
+
+#navigation a,#navigation a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 567px){
+    #navigation {
+        height: 10vh !important;
+    }
+
+}

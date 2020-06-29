@@ -1,0 +1,103 @@
+{
+	"Navigation": ["Education","Personal Projects","Professional Experience"],
+	"Introduction":{"Name":"Brandon Bankert","Title":"Full Stack Developer","Image":"/react-resume/images/face.png"},
+	"Content" : 
+	[
+		{
+			"Header":"Education",
+			"Subsections":
+			[
+				{
+					"Subheading":"Millersville University",
+					"Details":
+					[
+						"Graduated: December 2019",
+						"GPA: 3.92",
+						"Bachelors of Science in Computer Science"
+					],
+					"Link":""
+				}
+			]
+		},
+		{
+			"Header" : "Personal Projects",
+			"Subsections":
+			[
+				{
+					"Subheading":"UML Editor",
+					"Details":
+					[
+						"Developed a client side UML editor with Angular and Typescript",
+						"Worked with team members in a Agile methodology",
+						"Write Unit Tests for regression testing with Travis CI/CD",
+						"Use GitHub for source control"
+					],
+					"Link":"https://gwca-uml.firebaseapp.com"
+				},
+				{
+					"Subheading": "Resume Webpage (Legacy)",
+					"Details":
+					[
+						"Use Javascript to develop functions for elements and the sidebar",
+						"Use Photoshop to create images for the background",
+						"Made the webpage mobile responsive"
+					],
+					"Link":"https://bbankert.github.io"
+				},
+				{
+					"Subheading":"ASP.NET with C#",
+					"Details":
+					[
+						"Used session data to be able to keep the user data globally accessible for the duration of the application",
+						"Added authentication as well as an admin account to access all accounts",
+						"Used a code-first database to store recipes the users created"
+					],
+					"Link":"https://github.com/bBankert/.NET/"
+				}
+
+			]
+		},
+		{
+			"Header": "Professional Experience",
+			"Subsections":
+			[
+				{
+					"Subheading": "Full Stack Devleloper : Select Medical",
+					"Details":
+					[
+						"Developed and enhance web applications written in ASP.NET MVC and Sitecore",
+						"Develop and Enhance the API for form submissions",
+						"Write SQL queries for views and stored procdures for the API to execute",
+						"Worked with team members in a Agile methodology",
+						"Write Powershell powershell for automation of back-end tasks in Sitecore",
+						"Write SSIS Packages automate ETL tasks",
+						"Use TFS for source control"
+					],
+					"Link":""
+				},
+				{
+					"Subheading": "Web Developer Intern : Highmark Health Solutions",
+					"Details":
+					[
+						"Developed a reference site for the company's intranet using Angular",
+						"Adjusted the site to be mobile responsive and 508 compliant with Bootstrap",
+						"Developed using an agile methodology",
+						"Created documentation for future developers to reference for both the site and Angular",
+						"Assisted other interns with Angular questions"
+					],
+					"Link":""
+				},
+				{
+					"Subheading":"IT Helpdesk Intern : University of Pennsylvania",
+					"Details":
+					[
+						"Acted as point of contact for all techincal issues both students and faculty had",
+						"Assisted higher level IT members provide solutions for more complex issues",
+						"Imaged and deployed hardware for new faculty members",
+						"Created documentation for software usage that met the college's standards"
+					]
+				}
+			]
+		}
+	]
+}

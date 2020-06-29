@@ -2,7 +2,6 @@ import React,{useState,useEffect} from 'react';
 import './App.css';
 import Header from './containers/header';
 import Content from  './containers/content';
-import Footer from './containers/footer';
 
 const App = () => {
 
@@ -15,7 +14,7 @@ const App = () => {
 
   useEffect(()=>{
       //live version
-      fetch("./data/data.json")
+      fetch(window.location + "/data/data.json")
       .then(res => res.json())
       .then(json => {
       setData(() => ({
@@ -24,18 +23,6 @@ const App = () => {
         Content: json.Content,
       }));
     })
-    .catch(() => {
-      //dev version
-      fetch("/react-resume/data/data.json")
-      .then(res => res.json())
-      .then(json => {
-      setData(() => ({
-        Navigation: json.Navigation,
-        Introduction: json.Introduction,
-        Content: json.Content,
-      }));
-    });
-    });
     
   },[]);
 
@@ -43,7 +30,6 @@ const App = () => {
     <div>
       <Header header={data.Navigation}/>
       <Content data={data}/>
-      <Footer/>
     </div>
   );
 };

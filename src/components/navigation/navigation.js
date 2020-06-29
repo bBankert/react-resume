@@ -11,6 +11,16 @@ const Navigation = props => (
           {props.data.map((link) => 
               <NavigationItem link={link}/>
           )}
+          {/* Static links */}
+          <li class="nav-item">
+            <a class="nav-link" href={window.location + "/documents/Resume.pdf"} download>Download Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="http://www.github.com/bBankert" target="_blank">GitHub</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="mailto:bankert.brandon@gmail.com">Contact Me</a>
+          </li>
         </ul>
       </div>
     </nav>

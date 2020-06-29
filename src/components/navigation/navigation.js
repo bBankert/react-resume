@@ -1,15 +1,19 @@
 import React from 'react';
-import './navigation.css';
+import NavigationItem from './navigationItem';
 
 const Navigation = props => (
-    //hide on phones (sm)
-    <div id="navigation" className="col-12">
-        <ul className="pl-0">
-            <a href="#education"><li className="col">Education</li></a>
-            <a href="#projects"><li className="col">Projects</li></a>
-            <a href="#professional"><li className="col">Professional Experience</li></a>
+    <nav id="navigation" className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          {props.data.map((link) => 
+              <NavigationItem link={link}/>
+          )}
         </ul>
-    </div>
+      </div>
+    </nav>
 
 );
 

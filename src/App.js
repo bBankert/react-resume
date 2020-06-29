@@ -15,7 +15,7 @@ const App = () => {
 
   useEffect(()=>{
       //live version
-      fetch("/data/data.json")
+      fetch("./data/data.json")
       .then(res => res.json())
       .then(json => {
       setData(() => ({
@@ -26,7 +26,7 @@ const App = () => {
     })
     .catch(() => {
       //dev version
-      fetch("react-resume/data/data.json")
+      fetch("/react-resume/data/data.json")
       .then(res => res.json())
       .then(json => {
       setData(() => ({

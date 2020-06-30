@@ -1,23 +1,8 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import CardContent from './card-content';
 
 const Card = props => {
 
-    useEffect(() => {
-        // props.content.map((card) => {
-        //     //console.log(card);
-        //     card.Subsections.map((section) => {
-        //         //console.log(section);
-        //         section.Details.map((detail) => {
-        //             console.log(detail);
-        //         })
-        //     });
-        // });
-            //
-
-    }, [props.content]);
-
-    //const card = props.content[0];
 
     return(
 

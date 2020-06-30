@@ -12,14 +12,15 @@ const Navigation = props => (
               <NavigationItem link={link}/>
           )}
           {/* Static links */}
-          <li class="nav-item">
-            <a class="nav-link" href={window.location + "/documents/Resume.pdf"} download>Download Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://www.github.com/bBankert" target="_blank">GitHub</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="mailto:bankert.brandon@gmail.com">Contact Me</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Contact
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href={window.location + "/documents/Resume.pdf"} download>Download Resume</a>
+              <a class="dropdown-item" href="http://www.github.com/bBankert" target="_blank">GitHub</a>
+              <a class="dropdown-item" href="mailto:bankert.brandon@gmail.com">Contact Me</a>
+            </div>
           </li>
         </ul>
       </div>

@@ -17,7 +17,7 @@ const Navigation = props => (
               Contact
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href={window.location + "/documents/Resume.pdf"} download>Download Resume</a>
+              <a class="dropdown-item" href={window.location + "documents/Resume.pdf"} download>Download Resume</a>
               <a class="dropdown-item" href="http://www.github.com/bBankert" target="_blank">GitHub</a>
               <a class="dropdown-item" href="mailto:bankert.brandon@gmail.com">Contact Me</a>
             </div>

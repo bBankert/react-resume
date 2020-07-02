@@ -4,8 +4,8 @@ import Card from './card/card';
 const Cards = props => {
     return(
         <div>
-            {props.content.map((card) =>
-                <Card card={card}/>
+            {props.content.map((card,idx) =>
+                <Card key={'card-'+idx} card={card}/>
             )};
         </div>
     );

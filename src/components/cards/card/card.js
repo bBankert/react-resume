@@ -12,8 +12,8 @@ const Card = props => {
                  {props.card.Header}
              </div>
              <div className="card-body">
-                 {props.card.Subsections.map((section) => 
-                 <CardContent content = {section} />  
+                 {props.card.Subsections.map((section,idx) => 
+                 <CardContent key={props.card.Header+'-subsection-'+idx} content = {section} />  
                  )}
              </div>
          </div>

@@ -3,7 +3,6 @@ import './App.css';
 import Header from './containers/header';
 import Content from  './containers/content';
 import Loading from './components/loading/loading';
-import $ from 'jquery';
 
 const App = () => {
 
@@ -35,7 +34,7 @@ const App = () => {
 
   return (
     <div>
-      {loading == 1 ? <Loading/> : <React.Fragment><Header header={data.Navigation}/>
+      {loading === 1 ? <Loading/> : <React.Fragment><Header header={data.Navigation}/>
       <Content data={data}/></React.Fragment>}
       <Loading/>
     </div>

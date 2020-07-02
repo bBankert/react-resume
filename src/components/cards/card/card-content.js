@@ -7,8 +7,8 @@ const CardContent = props => {
             <li className="list-group-item">
                 <h5>{props.content.Subheading}</h5>
                 <ul>
-                    {props.content.Details.map((detail) => 
-                        <li>{detail}</li>
+                    {props.content.Details.map((detail,idx) => 
+                        <li key={props.content.Subheading + '-detail-'+idx}>{detail}</li>
                     )}
                     {props.content.Link ? <a href={props.content.Link}><li>Live Link</li></a> : ""}
                 </ul>

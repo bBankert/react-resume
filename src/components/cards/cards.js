@@ -6,7 +6,7 @@ const Cards = props => {
         <div>
             {props.content.map((card,idx) =>
                 <Card key={'card-'+idx} card={card}/>
-            )};
+            )}
         </div>
     );
 }

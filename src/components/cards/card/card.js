@@ -8,7 +8,7 @@ const Card = props => {
 
         <div id={(props.card.Header.replace(" ","-").toLocaleLowerCase())} className="my-4">
          <div className="card">
-             <div className="card-header bg-info">
+             <div className="card-header bg-dark text-white">
                 <h3>{props.card.Header}</h3>
              </div>
              <div className="card-body">

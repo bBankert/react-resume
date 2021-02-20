@@ -1,5 +1,5 @@
 import React from 'react';
-import CardContent from './card-content';
+import CardContent from './card-content/card-content';
 
 const Card = props => {
 

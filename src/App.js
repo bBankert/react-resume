@@ -1,8 +1,11 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,Suspense,lazy} from 'react';
 import './App.css';
-import Header from './containers/header';
-import Content from  './containers/content';
+//has to be synchronous since this is the fallback component
 import Loading from './components/loading/loading';
+
+const Header = lazy(() => import('./containers/header'));
+const Content = lazy(() => import('./containers/content'));
+const Footer = lazy(() => import('./containers/footer/footer'));
 
 const App = () => {
 
@@ -23,6 +26,7 @@ const App = () => {
         Navigation: json.Navigation,
         Introduction: json.Introduction,
         Content: json.Content,
+        Footer: json.Footer
       }));
       setLoading(0);
     })
@@ -34,8 +38,16 @@ const App = () => {
 
   return (
     <div>
-      {loading === 1 ? <Loading/> : <React.Fragment><Header header={data.Navigation}/>
-      <Content data={data}/></React.Fragment>}
+      <Suspense fallback={<Loading/>}>
+        {loading === 1 ? 
+          <Loading/> : 
+          <React.Fragment>
+            <Header header={data.Navigation}/>
+            <Content data={data}/>
+            <Footer footer={data.Footer} />
+          </React.Fragment>
+        }
+      </Suspense>
       <Loading/>
     </div>
   );

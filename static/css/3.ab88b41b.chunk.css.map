@@ -1,1 +1,0 @@
-{"version":3,"sources":["introduction.css"],"names":[],"mappings":"AACA,IACI,UAAW,CACX,eACJ,CAEA,gBACI,iBACJ","file":"3.ab88b41b.chunk.css","sourcesContent":["/* Scale image for page */\r\nimg{\r\n    width: 100%;\r\n    max-width: 250px;\r\n}\r\n\r\n#introduction *{\r\n    text-align: center;\r\n}"]}

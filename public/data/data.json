@@ -8,15 +8,6 @@
 			"Subsections":
 			[
 				{
-					"Subheading":"Grand Canyon University",
-					"Details":
-					[
-						"November 2020 to Present",
-						"Masters in Education with a Focus in STEM"
-					],
-					"Link":""
-				},
-				{
 					"Subheading":"Millersville University",
 					"Details":
 					[
@@ -70,6 +61,18 @@
 			"Header": "Professional Experience",
 			"Subsections":
 			[
+				{
+					"Subheading": "Senior Software Engineer : Members 1st Federal Credit Union",
+					"Details":
+					[
+						"Setup CI/CD through Azure DevOps pipelines",
+						"Upgraded existing applications to .NET 6 fom .NET Framework and .NET Core",
+						"Bug fixes in the Native Android App",
+						"Containerized applications through Docker and Devcontainers",
+						"Moved applications from internal into Azure"
+					],
+					"Link":""
+				},
 				{
 					"Subheading": "Full Stack Devleloper : Select Medical",
 					"Details":

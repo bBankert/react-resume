@@ -2,7 +2,7 @@ name: Build And Deploy To GH Pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master,UpdateResume-AddCICD ]
 jobs:
   build:
     runs-on: ubuntu-latest

@@ -1,6 +1,5 @@
 import React from 'react';
 import './footer.css';
-//import Navigation from '../components/navigation/navigation';
 
 const formatPhoneNumber = (phoneNumber) => {
     let formattedNumber = phoneNumber.match(/(\d{3})(\d{3})(\d{4})/);

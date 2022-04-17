@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/react-resume/static/css/main.b67822fb.css",
-    "main.js": "/react-resume/static/js/main.14e20133.js",
+    "main.css": "/react-resume/static/css/main.5d83a31f.css",
+    "main.js": "/react-resume/static/js/main.97c5cafb.js",
     "static/css/654.829f2a40.chunk.css": "/react-resume/static/css/654.829f2a40.chunk.css",
     "static/js/654.eb05b22e.chunk.js": "/react-resume/static/js/654.eb05b22e.chunk.js",
     "static/css/428.aed5fbd0.chunk.css": "/react-resume/static/css/428.aed5fbd0.chunk.css",
-    "static/js/428.66b4388e.chunk.js": "/react-resume/static/js/428.66b4388e.chunk.js",
+    "static/js/428.0c4606af.chunk.js": "/react-resume/static/js/428.0c4606af.chunk.js",
     "static/css/478.dc9824fd.chunk.css": "/react-resume/static/css/478.dc9824fd.chunk.css",
-    "static/js/478.8a8d27c1.chunk.js": "/react-resume/static/js/478.8a8d27c1.chunk.js",
+    "static/js/478.c927c9aa.chunk.js": "/react-resume/static/js/478.c927c9aa.chunk.js",
     "static/js/134.e0daf1e8.chunk.js": "/react-resume/static/js/134.e0daf1e8.chunk.js",
     "index.html": "/react-resume/index.html",
-    "main.b67822fb.css.map": "/react-resume/static/css/main.b67822fb.css.map",
-    "main.14e20133.js.map": "/react-resume/static/js/main.14e20133.js.map",
+    "main.5d83a31f.css.map": "/react-resume/static/css/main.5d83a31f.css.map",
+    "main.97c5cafb.js.map": "/react-resume/static/js/main.97c5cafb.js.map",
     "654.829f2a40.chunk.css.map": "/react-resume/static/css/654.829f2a40.chunk.css.map",
     "654.eb05b22e.chunk.js.map": "/react-resume/static/js/654.eb05b22e.chunk.js.map",
     "428.aed5fbd0.chunk.css.map": "/react-resume/static/css/428.aed5fbd0.chunk.css.map",
-    "428.66b4388e.chunk.js.map": "/react-resume/static/js/428.66b4388e.chunk.js.map",
+    "428.0c4606af.chunk.js.map": "/react-resume/static/js/428.0c4606af.chunk.js.map",
     "478.dc9824fd.chunk.css.map": "/react-resume/static/css/478.dc9824fd.chunk.css.map",
-    "478.8a8d27c1.chunk.js.map": "/react-resume/static/js/478.8a8d27c1.chunk.js.map",
+    "478.c927c9aa.chunk.js.map": "/react-resume/static/js/478.c927c9aa.chunk.js.map",
     "134.e0daf1e8.chunk.js.map": "/react-resume/static/js/134.e0daf1e8.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b67822fb.css",
-    "static/js/main.14e20133.js"
+    "static/css/main.5d83a31f.css",
+    "static/js/main.97c5cafb.js"
   ]
 }

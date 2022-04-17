@@ -16,25 +16,29 @@ const App = () => {
     Content: {},
   });
 
+  async function LoadData(){
+    try{
+      const responseData = await fetch(window.location + "/data/data.json");
+      const jsonData = await responseData.json();
+      setData(() => ({
+        Navigation: jsonData.Navigation,
+        Introduction: jsonData.Introduction,
+        Content: jsonData.Content,
+        Footer: jsonData.Footer
+      }));
+      setLoading(false);
+    }
+    catch(error){
+      console.log(error);
+    }
+    
+
+  }
 
   useEffect(()=>{
-      //live version
-      fetch(window.location + "/data/data.json")
-      .then(res => res.json())
-      .then(json => {
-        setData(() => ({
-          Navigation: json.Navigation,
-          Introduction: json.Introduction,
-          Content: json.Content,
-          Footer: json.Footer
-        }))
-      setLoading(false);
-    })
-    .catch(error => {
-      console.log(error);
-    });
-    
-    
+      (async () => {
+        await LoadData();
+      })();
   },[loading]);
 
 
@@ -50,7 +54,6 @@ const App = () => {
           </React.Fragment>
         }
       </Suspense>
-      <Loading/>
     </div>
   );
 };

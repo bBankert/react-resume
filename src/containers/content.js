@@ -1,4 +1,3 @@
-import React from  'react';
 import Introduction from '../components/cards/introduction';
 import Cards from '../components/cards/cards';
 

@@ -22,7 +22,6 @@ const App = () => {
       fetch(window.location + "/data/data.json")
       .then(res => res.json())
       .then(json => {
-        console.log(json);
         setData(() => ({
           Navigation: json.Navigation,
           Introduction: json.Introduction,

@@ -7,7 +7,7 @@ const Introduction = props => {
     return (
     <div id="introduction" className="my-4">
         <div className="col-12">
-            <img src={props.introduction.Image} alt="broken link"/>
+            <img src={props.introduction.Image} alt="Brandon Bankert"/>
         </div>
         <div className="col-12">
             <h1 className="name">{props.introduction.Name}</h1>

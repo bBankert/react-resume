@@ -7,21 +7,34 @@ a:hover > svg{
     color: black;
 }
 
-#static-links,#static-links-desktop{
+#static-links{
     display: flex;
     flex-direction: row;
-    position: static;
+    position: absolute;
+    top: 7%;
+    right: 0;
 }
-@media(max-width: 1023px){
-    #static-links-desktop{
-        display: none;
+@media(min-width: 1024px){
+    #static-links{
+        position: static;
     }
 }
 
-@media(min-width: 1024px){
-    #static-links{
-        display: none;
-    }
+.skip-link{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background-color: white;
+
+}
+
+.skip-link:focus{
+    width: auto;
+    height: auto;
+    left: auto;
 }
 
 

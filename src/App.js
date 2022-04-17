@@ -9,7 +9,7 @@ const Footer = lazy(() => import('./containers/footer/footer'));
 
 const App = () => {
 
-  const [loading,setLoading] = useState(1);
+  const [loading,setLoading] = useState(true);
   const [data,setData] = useState({
     Navigation: [],
     Introduction: {},
@@ -22,15 +22,18 @@ const App = () => {
       fetch(window.location + "/data/data.json")
       .then(res => res.json())
       .then(json => {
-      setData(() => ({
-        Navigation: json.Navigation,
-        Introduction: json.Introduction,
-        Content: json.Content,
-        Footer: json.Footer
-      }));
-      setLoading(0);
+        console.log(json);
+        setData(() => ({
+          Navigation: json.Navigation,
+          Introduction: json.Introduction,
+          Content: json.Content,
+          Footer: json.Footer
+        }))
+      setLoading(false);
     })
-
+    .catch(error => {
+      console.log(error);
+    });
     
     
   },[loading]);
@@ -39,7 +42,7 @@ const App = () => {
   return (
     <div>
       <Suspense fallback={<Loading/>}>
-        {loading === 1 ? 
+        {loading ? 
           <Loading/> : 
           <React.Fragment>
             <Header header={data.Navigation}/>

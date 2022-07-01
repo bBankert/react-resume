@@ -33,11 +33,14 @@ const App = () => {
               //There is a time period between when "isLoading" is false and when the data
               //is actually populated... so this handles the error
               <></> :
-              <React.Fragment>
+              ( data && data.Navigation && data.Footer ?
+                <React.Fragment>
                   <Header header={data.Navigation}/>
                   <Content data={data}/>
                   <Footer footer={data.Footer} />
-                </React.Fragment>
+                </React.Fragment> :
+                <p>So... there isn't any data here?...</p>
+              )
             }
             
           </Otherwise>

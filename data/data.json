@@ -1,6 +1,6 @@
 {
 	"Navigation": ["Education","Personal Projects","Professional Experience"],
-	"Introduction":{"Name":"Brandon Bankert","Title":"Full Stack Developer","Image":"/react-resume-testing/images/face.png"},
+	"Introduction":{"Name":"Brandon Bankert","Title":"Full Stack Developer","Image":"/react-resume/images/face.png"},
 	"Content" : 
 	[
 		{

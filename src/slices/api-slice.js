@@ -8,7 +8,8 @@ export const informationApi = createApi({
     endpoints: (builder) => ({
       getInformation: builder.query({
           //pull based on current url
-        query: () => `${window.location.pathname}/data/data.json`,
+          //check to see if the path name ends with a forward slash or not and correctly request the data file
+        query: () => `${window.location.pathname}${window.location.pathname.endsWith('/') ? '' : '/'}data/data.json`,
       }),
     }),
   })

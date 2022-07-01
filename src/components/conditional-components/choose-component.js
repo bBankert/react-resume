@@ -1,5 +1,6 @@
 import { Children } from 'react'
 
+//TODO: Find out why the conditions aren't being properly configured
 const Choose = ({ children }) => {
     const arrayOfChildren = Children.toArray(children)
   

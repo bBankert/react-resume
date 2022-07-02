@@ -1,10 +1,11 @@
-import React from 'react';
+//import React from 'react';
 import { setupApiStore } from './testing-utils/api-store-utils';
 import App from './App';
-import { Provider } from 'react-redux';
-import { informationApi } from './slices/api-slice';
-import { render, waitFor,screen } from '@testing-library/react';
+import fetchMock from 'jest-fetch-mock'
+import { informationApi, useGetInformationQuery } from './slices/api-slice';
+import { render, waitFor,screen, renderHook } from '@testing-library/react';
 import '@testing-library/jest-dom'
+import React from 'react';
 //given that all of the logic happens here in the app.js (fetching data)
 //alot of the actual tests are going to be here
 
@@ -13,7 +14,9 @@ describe('App data fetching tests',() => {
 
   
   //setup the store for redux
-  const storeRef = setupApiStore(informationApi,{ })
+  const storeRef = setupApiStore(informationApi,{ });
+
+  
   const data = {
     Navigation: ["nav-link"],
     Introduction:{"Name":"name","Title":"title","Image":"/path/to/img.png"},
@@ -51,22 +54,22 @@ describe('App data fetching tests',() => {
 
   it('Requests the data json file', async () => {
     return storeRef.store
-      .dispatch(
+      .dispatch<any>(
         informationApi.endpoints.getInformation.initiate(undefined)
       )
       .then(() => {
         expect(fetchMock).toBeCalledTimes(1);
-        const { method,url } = fetchMock.mock.calls[0][0];
+        const request = fetchMock.mock.calls[0][0] as Request;
 
-        expect(method).toBe('GET');
-        expect(url).toContain('data.json');
+        expect(request.method).toBe('GET');
+        expect(request.url).toContain('data.json');
       })
     
   });
 
 
   it('Returns a successful response and renders the navigation', async () => {
-    
+
     render(<App />, { wrapper: storeRef.wrapper});
     await waitFor(() => {
       expect(screen.queryByText(/Loading, Please Wait.../i)).not.toBeInTheDocument();
@@ -97,7 +100,7 @@ describe('App data fetching tests',() => {
     })
     
     //get all links and filter
-    const links = screen.getAllByRole("link");
+    const links = screen.getAllByRole("link") as HTMLAnchorElement[];
 
     const emailLink = links
     .filter(link => link.textContent === 'Email me' && link.href === encodeURI('mailto:email@test.com?subject=Resume Site Contact'));

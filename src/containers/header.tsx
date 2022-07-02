@@ -1,6 +1,7 @@
+import React from 'react';
 import Navigation from '../components/navigation/navigation';
 
-const Header = props => (
+const Header = (props : any) => (
     <header>
         {props.header && props.header.length > 0 ? 
             <Navigation data={props.header}/> : 

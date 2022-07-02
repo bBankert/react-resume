@@ -1,6 +1,7 @@
+import React from 'react';
 import './introduction.css';
 
-const Introduction = props => {
+const Introduction = (props: any) => {
 
 
     return (

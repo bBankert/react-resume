@@ -3,7 +3,7 @@ import NavigationItem from './navigationItem';
 import {AiOutlineMail,AiFillGithub,AiOutlineDownload} from 'react-icons/ai';
 import './navigation.css';
 
-const Navigation = props => (
+const Navigation = (props : any) => (
     <nav id="navigation" className="navbar navbar-expand-lg navbar-dark bg-dark">
         <a className="skip-link" href="#introduction">Skip to main content</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,7 +11,7 @@ const Navigation = props => (
         </button>
       <div className="collapse navbar-collapse mr-auto" id="navbarNav">
         <ul className="navbar-nav">
-          {props.data.map((link,idx) => 
+          {props.data.map((link: any,idx: string) => 
               <NavigationItem key={'link-'+idx} link={link}/>
           )}
         </ul>

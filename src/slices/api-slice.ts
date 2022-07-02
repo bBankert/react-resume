@@ -10,6 +10,10 @@ export const informationApi = createApi({
           //pull based on current url
           //check to see if the path name ends with a forward slash or not and correctly request the data file
         query: () => `${window.location.pathname}${window.location.pathname.endsWith('/') ? '' : '/'}data/data.json`,
+        // transformResponse: (res : any) => {
+        //   //console.log(res);
+        //   return res;
+        // }
       }),
     }),
   })

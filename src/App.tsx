@@ -11,7 +11,7 @@ const Footer = lazy(() => import('./containers/footer/footer'));
 
 const App = () => {
 
-  const { data, isLoading, isError } = useGetInformationQuery();
+  const { data, isLoading, isError } = useGetInformationQuery('');
 
 
   return (

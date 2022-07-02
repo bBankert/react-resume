@@ -1,13 +1,14 @@
+import React from 'react';
 import './footer.css';
 
-const formatPhoneNumber = (phoneNumber) => {
-    let formattedNumber = phoneNumber.match(/(\d{3})(\d{3})(\d{4})/);
-    formattedNumber = "(" + formattedNumber[1] + ") " + formattedNumber[2] + "-" + formattedNumber[3]; 
+const formatPhoneNumber = (phoneNumber :  string) => {
+    const matches = phoneNumber.match(/(\d{3})(\d{3})(\d{4})/);
+    let formattedNumber = "(" + matches[1] + ") " + matches[2] + "-" + matches[3]; 
     return formattedNumber;
 }
 
 
-const Header = props => (
+const Header = (props: any) => (
     <footer className="col-sm-12">
         <p>Brandon Bankert</p>
         <a href={"mailto:" + props.footer.Email + "?subject=Resume Site Contact"}>Email me</a>

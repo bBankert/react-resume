@@ -1,6 +1,7 @@
+import React from 'react';
 import CardContent from './card-content/card-content';
 
-const Card = props => {
+const Card = (props : any) => {
 
 
     return(
@@ -11,7 +12,7 @@ const Card = props => {
                 <h3>{props.card.Header}</h3>
              </div>
              <div className="card-body">
-                 {props.card.Subsections.map((section,idx) => 
+                 {props.card.Subsections.map((section: any,idx : string) => 
                  <CardContent key={props.card.Header+'-subsection-'+idx} content = {section} />  
                  )}
              </div>

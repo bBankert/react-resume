@@ -1,7 +1,8 @@
 import Introduction from '../components/cards/introduction';
 import Cards from '../components/cards/cards';
+import React from 'react';
 
-const Content = props => {
+const Content = (props: any) => {
 
 
     return(

@@ -18,28 +18,28 @@ describe('App data fetching tests',() => {
 
   
   const data = {
-    Navigation: ["nav-link"],
-    Introduction:{"Name":"name","Title":"title","Image":"/path/to/img.png"},
-    Content : 
+    navigation: ["nav-link"],
+    introduction:{name:"name",title:"title",image:"/path/to/img.png"},
+    content : 
     [
       {
-        "Header":"header",
-        "Subsections":
+        header:"header",
+        subsections:
         [
           {
-            "Subheading":"subheading",
-            "Details":
+            subheading:"subheading",
+            details:
             [
               "text 1",
               "text 2",
               "text 3"
             ],
-            "Link":"mylink.com"
+            link:"mylink.com"
           }
         ]
       },
     ],
-    Footer: {"Email":"email@test.com","Phone":"1234567890"}
+    footer: {email:"email@test.com",phone:"1234567890"}
     };
 
   beforeEach(() => {
@@ -55,7 +55,7 @@ describe('App data fetching tests',() => {
   it('Requests the data json file', async () => {
     return storeRef.store
       .dispatch<any>(
-        informationApi.endpoints.getInformation.initiate(undefined)
+        informationApi.endpoints.getInformation.initiate(null)
       )
       .then(() => {
         expect(fetchMock).toBeCalledTimes(1);

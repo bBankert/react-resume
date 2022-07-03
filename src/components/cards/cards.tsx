@@ -1,11 +1,17 @@
 import React from 'react';
 import Card from './card/card';
+import { ICardContent } from '~/shared/models/card-content';
 
-const Cards = (props : any) => {
+interface CardsProps{
+    cardsContents: ICardContent[]
+}
+
+
+const Cards = ({cardsContents} : CardsProps) => {
     return(
         <div>
-            {props.content.map((card: any,idx: string) =>
-                <Card key={'card-'+idx} card={card}/>
+            {cardsContents.map((card: ICardContent,idx: number) =>
+                <Card key={'card-'+idx} cardContents={card}/>
             )}
         </div>
     );

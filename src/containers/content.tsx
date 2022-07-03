@@ -1,15 +1,26 @@
 import Introduction from '../components/cards/introduction';
 import Cards from '../components/cards/cards';
 import React from 'react';
+import { ICardContent } from '~/shared/models/card-content';
+import { IIntroduction } from '~/shared/models/introduction';
 
-const Content = (props: any) => {
+interface IContentProps{
+    content: ICardContent[],
+    introduction: IIntroduction
+}
+
+
+const Content = ({content,introduction} : IContentProps) => {
 
 
     return(
     <main className="offset-md-3 col-md-6 col-sm-12">
-        <Introduction introduction={props.data.Introduction}/>
-        {props.data && Object.keys(props.data.Content).length > 0  ?
-            <Cards content={props.data.Content}/> : 
+        <Introduction 
+        imagePath={introduction.image}
+        name={introduction.name}
+        title={introduction.title}/>
+        {content ?
+            <Cards cardsContents={content}/> : 
             <p>Loading...</p>  
         }
     </main>

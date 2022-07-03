@@ -1,6 +1,11 @@
 import React from 'react';
 
-const NavigationItem = (props: any) => {
+interface INavigationItemProps {
+    navigationLink: string
+}
+
+
+const NavigationItem = ({navigationLink}: INavigationItemProps) => {
 
     //for smooth scrolling
     function scrollToElement(event : any){
@@ -17,7 +22,7 @@ const NavigationItem = (props: any) => {
 
     return(
     <li className="nav-item">
-        <a className="nav-link" onClick={(event) => scrollToElement(event)} href={"#"+(props.link.replace(" ","-").toLocaleLowerCase())}>{props.link}</a>
+        <a className="nav-link" onClick={(event) => scrollToElement(event)} href={"#"+(navigationLink.replace(" ","-").toLocaleLowerCase())}>{navigationLink}</a>
     </li>
     );
 }

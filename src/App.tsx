@@ -11,7 +11,7 @@ const Footer = lazy(() => import('./containers/footer/footer'));
 
 const App = () => {
 
-  const { data, isLoading, isError } = useGetInformationQuery('');
+  const { data, isLoading, isError } = useGetInformationQuery(null);
 
 
   return (
@@ -22,9 +22,13 @@ const App = () => {
           isError ?
           <p>I am sorry, it looks like an error occurred...</p> :
           <React.Fragment>
-            <Header header={data.Navigation}/>
-            <Content data={data}/>
-            <Footer footer={data.Footer} />
+            <Header navigation={data.navigation}/>
+            <Content 
+              content={data.content} 
+              introduction={data.introduction}/>
+            <Footer 
+              email={data.footer.email} 
+              phone={data.footer.phone} />
           </React.Fragment> 
         }
       </Suspense>

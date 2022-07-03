@@ -1,69 +1,69 @@
 {
-	"Navigation": ["Education","Personal Projects","Professional Experience"],
-	"Introduction":{"Name":"Brandon Bankert","Title":"Full Stack Developer","Image":"/react-resume/images/face.png"},
-	"Content" : 
+	"navigation": ["Education","Personal Projects","Professional Experience"],
+	"introduction":{"name":"Brandon Bankert","title":"Full Stack Developer","image":"/react-resume/images/face.png"},
+	"content" : 
 	[
 		{
-			"Header":"Education",
-			"Subsections":
+			"header":"Education",
+			"subsections":
 			[
 				{
-					"Subheading":"Millersville University",
-					"Details":
+					"subheading":"Millersville University",
+					"details":
 					[
 						"Graduated: December 2019",
 						"GPA: 3.92",
 						"Bachelors of Science in Computer Science"
 					],
-					"Link":""
+					"link":""
 				}
 			]
 		},
 		{
-			"Header" : "Personal Projects",
-			"Subsections":
+			"header" : "Personal Projects",
+			"subsections":
 			[
 				{
-					"Subheading":"UML Editor",
-					"Details":
+					"subheading":"UML Editor",
+					"details":
 					[
 						"Developed a client side UML editor with Angular and Typescript",
 						"Worked with team members in a Agile methodology",
 						"Write Unit Tests for regression testing with Travis CI/CD",
 						"Use GitHub for source control"
 					],
-					"Link":"https://gwca-uml.firebaseapp.com"
+					"link":"https://gwca-uml.firebaseapp.com"
 				},
 				{
-					"Subheading": "Resume Webpage (Legacy)",
-					"Details":
+					"subheading": "Resume Webpage (Legacy)",
+					"details":
 					[
 						"Use Javascript to develop functions for elements and the sidebar",
 						"Use Photoshop to create images for the background",
 						"Made the webpage mobile responsive"
 					],
-					"Link":"https://bbankert.github.io"
+					"link":"https://bbankert.github.io"
 				},
 				{
-					"Subheading":"ASP.NET with C#",
-					"Details":
+					"subheading":"ASP.NET with C#",
+					"details":
 					[
 						"Used session data to be able to keep the user data globally accessible for the duration of the application",
 						"Added authentication as well as an admin account to access all accounts",
 						"Used a code-first database to store recipes the users created"
 					],
-					"Link":"https://github.com/bBankert/.NET/"
+					"link":"https://github.com/bBankert/.NET/"
 				}
 
 			]
 		},
 		{
-			"Header": "Professional Experience",
-			"Subsections":
+			"header": "Professional Experience",
+			"subsections":
 			[
 				{
-					"Subheading": "Senior Software Engineer : Members 1st Federal Credit Union",
-					"Details":
+					"subheading": "Senior Software Engineer : Members 1st Federal Credit Union",
+					"details":
 					[
 						"Setup CI/CD through Azure DevOps pipelines",
 						"Upgraded existing applications to .NET 6 fom .NET Framework and .NET Core",
@@ -71,11 +71,11 @@
 						"Containerized applications through Docker and Devcontainers",
 						"Moved applications from internal into Azure"
 					],
-					"Link":""
+					"link":""
 				},
 				{
-					"Subheading": "Full Stack Devleloper : Select Medical",
-					"Details":
+					"subheading": "Full Stack Devleloper : Select Medical",
+					"details":
 					[
 						"Developed and enhance web applications written in ASP.NET MVC and Sitecore",
 						"Develop and Enhance the API for form submissions",
@@ -85,11 +85,11 @@
 						"Write SSIS Packages automate ETL tasks",
 						"Use TFS for source control"
 					],
-					"Link":""
+					"link":""
 				},
 				{
-					"Subheading": "Web Developer Intern : Highmark Health Solutions",
-					"Details":
+					"subheading": "Web Developer Intern : Highmark Health Solutions",
+					"details":
 					[
 						"Developed a reference site for the company's intranet using Angular",
 						"Adjusted the site to be mobile responsive and 508 compliant with Bootstrap",
@@ -97,11 +97,11 @@
 						"Created documentation for future developers to reference for both the site and Angular",
 						"Assisted other interns with Angular questions"
 					],
-					"Link":""
+					"link":""
 				},
 				{
-					"Subheading":"IT Helpdesk Intern : University of Pennsylvania",
-					"Details":
+					"subheading":"IT Helpdesk Intern : University of Pennsylvania",
+					"details":
 					[
 						"Acted as point of contact for all techincal issues both students and faculty had",
 						"Assisted higher level IT members provide solutions for more complex issues",
@@ -112,5 +112,5 @@
 			]
 		}
 	],
-	"Footer": {"Email":"bankert.brandon@gmail.com","Phone":"7173576785"}
+	"footer": {"email":"bankert.brandon@gmail.com","phone":"7173576785"}
 }

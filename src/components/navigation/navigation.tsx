@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationItem from './navigation-item';
+import NavigationItem from './navigation-item/navigation-item';
 import {AiOutlineMail,AiFillGithub,AiOutlineDownload} from 'react-icons/ai';
 import './navigation.scss';
 import { Container, Navbar,Nav } from 'react-bootstrap';

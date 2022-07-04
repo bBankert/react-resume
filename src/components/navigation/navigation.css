@@ -7,17 +7,8 @@ a:hover > svg{
     color: black;
 }
 
-#static-links{
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 7%;
-    right: 0;
-}
-@media(min-width: 1024px){
-    #static-links{
-        position: static;
-    }
+nav a {
+    color: white;
 }
 
 .skip-link{

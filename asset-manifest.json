@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-resume/static/css/main.81f52e70.css",
-    "main.js": "/react-resume/static/js/main.68b98d2f.js",
-    "static/css/208.5b61fe9e.chunk.css": "/react-resume/static/css/208.5b61fe9e.chunk.css",
+    "main.js": "/react-resume/static/js/main.b9be8a66.js",
+    "static/css/208.1a88b5b9.chunk.css": "/react-resume/static/css/208.1a88b5b9.chunk.css",
     "static/js/208.2b368136.chunk.js": "/react-resume/static/js/208.2b368136.chunk.js",
     "static/css/710.d3e77e69.chunk.css": "/react-resume/static/css/710.d3e77e69.chunk.css",
     "static/js/710.290f6466.chunk.js": "/react-resume/static/js/710.290f6466.chunk.js",
@@ -11,8 +11,8 @@
     "static/js/372.f09efa0a.chunk.js": "/react-resume/static/js/372.f09efa0a.chunk.js",
     "index.html": "/react-resume/index.html",
     "main.81f52e70.css.map": "/react-resume/static/css/main.81f52e70.css.map",
-    "main.68b98d2f.js.map": "/react-resume/static/js/main.68b98d2f.js.map",
-    "208.5b61fe9e.chunk.css.map": "/react-resume/static/css/208.5b61fe9e.chunk.css.map",
+    "main.b9be8a66.js.map": "/react-resume/static/js/main.b9be8a66.js.map",
+    "208.1a88b5b9.chunk.css.map": "/react-resume/static/css/208.1a88b5b9.chunk.css.map",
     "208.2b368136.chunk.js.map": "/react-resume/static/js/208.2b368136.chunk.js.map",
     "710.d3e77e69.chunk.css.map": "/react-resume/static/css/710.d3e77e69.chunk.css.map",
     "710.290f6466.chunk.js.map": "/react-resume/static/js/710.290f6466.chunk.js.map",
@@ -22,6 +22,6 @@
   },
   "entrypoints": [
     "static/css/main.81f52e70.css",
-    "static/js/main.68b98d2f.js"
+    "static/js/main.b9be8a66.js"
   ]
 }

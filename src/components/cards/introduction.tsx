@@ -1,5 +1,5 @@
 import React from 'react';
-import './introduction.css';
+import './introduction.scss';
 
 
 interface IIntroductionProps {
@@ -12,7 +12,7 @@ const Introduction = ({imagePath,name,title}: IIntroductionProps) => {
 
 
     return (
-    <div id="introduction" className="my-4">
+    <div id="introduction" className="my-4 introduction-container">
         <div className="col-12">
             <img src={imagePath} alt="Brandon Bankert"/>
         </div>

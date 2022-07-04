@@ -1,0 +1,46 @@
+@use "sass:map";
+@import "../../shared/sass/variables.scss";
+
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #343a40;
+    color: white;
+
+    @media(min-width: map.get($screen-breakpoints,"md")) {
+        flex-direction: row;
+        padding: 15px;
+        position: relative;
+        top: 10px;
+    }
+
+    p{
+        padding-top: 20px;
+
+        @media(min-width: map.get($screen-breakpoints,"md")) {
+            padding-top: 0;
+            margin-bottom: 0;
+        }
+    }
+
+
+    a{
+        color: white;
+        text-decoration: none;
+
+        &:hover{
+            color: white;
+            text-decoration: none;
+        }
+
+        &:last-child{
+            padding-bottom: 20px;
+
+            @media(min-width: map.get($screen-breakpoints,"md")) {
+                padding-bottom: 0;
+            }
+        }
+    }
+}

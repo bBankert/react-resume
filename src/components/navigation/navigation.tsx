@@ -1,7 +1,7 @@
 import React from 'react';
 import NavigationItem from './navigation-item';
 import {AiOutlineMail,AiFillGithub,AiOutlineDownload} from 'react-icons/ai';
-import './navigation.css';
+import './navigation.scss';
 import { Container, Navbar,Nav } from 'react-bootstrap';
 
 interface INavigationProps {
@@ -10,7 +10,8 @@ interface INavigationProps {
 
 const Navigation = ({navigationItems} : INavigationProps) => (
     <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" className="mb-3">
-      <Container fluid="xl"> 
+      <Container fluid="xl">
+        <a className="skip-link" href="#introduction">Skip to main content</a>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">

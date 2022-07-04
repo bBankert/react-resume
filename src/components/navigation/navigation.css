@@ -11,6 +11,10 @@ nav a {
     color: white;
 }
 
+.icon-container{
+    display: flex;
+}
+
 .skip-link{
     position: absolute;
     left: -10000px;

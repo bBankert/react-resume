@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/506.0bdcd7f8.chunk.css","mappings":"AACI,4BAEI,gBADA,UACA,CAGJ,0BACI","sources":["components/cards/introduction.scss"],"sourcesContent":[".introduction-container{\n    img{\n        width: 100%;\n        max-width: 250px;\n    }\n\n    *{\n        text-align: center;\n    }\n}"],"names":[],"sourceRoot":""}

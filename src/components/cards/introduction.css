@@ -1,9 +1,0 @@
-/* Scale image for page */
-img{
-    width: 100%;
-    max-width: 250px;
-}
-
-#introduction *{
-    text-align: center;
-}

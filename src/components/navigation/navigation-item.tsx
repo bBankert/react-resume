@@ -1,4 +1,5 @@
 import React from 'react';
+import { Nav } from 'react-bootstrap';
 
 interface INavigationItemProps {
     navigationLink: string
@@ -21,9 +22,7 @@ const NavigationItem = ({navigationLink}: INavigationItemProps) => {
     }
 
     return(
-    <li className="nav-item">
-        <a className="nav-link" onClick={(event) => scrollToElement(event)} href={"#"+(navigationLink.replace(" ","-").toLocaleLowerCase())}>{navigationLink}</a>
-    </li>
+        <Nav.Link onClick={(event) => scrollToElement(event)} href={"#"+(navigationLink.replace(" ","-").toLocaleLowerCase())}>{navigationLink}</Nav.Link>
     );
 }
 

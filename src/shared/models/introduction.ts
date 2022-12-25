@@ -1,5 +1,5 @@
 export interface IIntroduction {
-    name: string,
-    title: string,
-    image: string
+  name: string;
+  title: string;
+  image: string;
 }

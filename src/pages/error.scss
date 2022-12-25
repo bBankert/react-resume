@@ -1,0 +1,18 @@
+@use "sass:map";
+@import "../shared/sass/variables.scss";
+
+.errorStack {
+    @media (min-width: map.get($screen-breakpoints,"sm")) {
+        margin: 0 auto;
+    }
+
+    @media (min-width: map.get($screen-breakpoints,"md")) {
+        max-width: 50%;
+    }
+
+    .MuiAlert-message{
+        @media (min-width: map.get($screen-breakpoints,"xs")) {
+            margin: 0 auto;
+        }
+    }
+}

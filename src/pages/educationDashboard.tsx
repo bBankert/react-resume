@@ -1,5 +1,6 @@
 import { Card, CardContent, Grid, Paper, styled, Typography } from "@mui/material";
 import React from "react";
+import EducationDashboardLoader from "../components/shimmerLoaders/educationDashboardLoader";
 import { useGetEducationInformationQuery } from "../shared/services/informationApi";
 
 const HeaderCard = styled(Paper)(({ theme }) => ({
@@ -34,7 +35,7 @@ const EducationDashboard = () => {
                         </HeaderCard>
                 </Grid>
                 {isLoading && !isError ?
-                    <p>Loading please wait...</p>
+                    <EducationDashboardLoader />
                 : null}
                 {!isLoading && isError ?
                     <p>Something went wrong loading the education information</p>

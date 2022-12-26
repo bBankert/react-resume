@@ -1,27 +1,13 @@
 {
   "files": {
-    "main.css": "/react-resume/static/css/main.75aca034.css",
-    "main.js": "/react-resume/static/js/main.7868f370.js",
-    "static/css/433.0f57e1c1.chunk.css": "/react-resume/static/css/433.0f57e1c1.chunk.css",
-    "static/js/433.429c2320.chunk.js": "/react-resume/static/js/433.429c2320.chunk.js",
-    "static/css/506.0bdcd7f8.chunk.css": "/react-resume/static/css/506.0bdcd7f8.chunk.css",
-    "static/js/506.60938240.chunk.js": "/react-resume/static/js/506.60938240.chunk.js",
-    "static/css/103.4221dd7a.chunk.css": "/react-resume/static/css/103.4221dd7a.chunk.css",
-    "static/js/103.21c7a40e.chunk.js": "/react-resume/static/js/103.21c7a40e.chunk.js",
-    "static/js/372.f09efa0a.chunk.js": "/react-resume/static/js/372.f09efa0a.chunk.js",
+    "main.css": "/react-resume/static/css/main.240bce7e.css",
+    "main.js": "/react-resume/static/js/main.d1dd169e.js",
     "index.html": "/react-resume/index.html",
-    "main.75aca034.css.map": "/react-resume/static/css/main.75aca034.css.map",
-    "main.7868f370.js.map": "/react-resume/static/js/main.7868f370.js.map",
-    "433.0f57e1c1.chunk.css.map": "/react-resume/static/css/433.0f57e1c1.chunk.css.map",
-    "433.429c2320.chunk.js.map": "/react-resume/static/js/433.429c2320.chunk.js.map",
-    "506.0bdcd7f8.chunk.css.map": "/react-resume/static/css/506.0bdcd7f8.chunk.css.map",
-    "506.60938240.chunk.js.map": "/react-resume/static/js/506.60938240.chunk.js.map",
-    "103.4221dd7a.chunk.css.map": "/react-resume/static/css/103.4221dd7a.chunk.css.map",
-    "103.21c7a40e.chunk.js.map": "/react-resume/static/js/103.21c7a40e.chunk.js.map",
-    "372.f09efa0a.chunk.js.map": "/react-resume/static/js/372.f09efa0a.chunk.js.map"
+    "main.240bce7e.css.map": "/react-resume/static/css/main.240bce7e.css.map",
+    "main.d1dd169e.js.map": "/react-resume/static/js/main.d1dd169e.js.map"
   },
   "entrypoints": [
-    "static/css/main.75aca034.css",
-    "static/js/main.7868f370.js"
+    "static/css/main.240bce7e.css",
+    "static/js/main.d1dd169e.js"
   ]
 }

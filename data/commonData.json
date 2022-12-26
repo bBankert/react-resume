@@ -1,0 +1,31 @@
+{
+  "navLinks": {
+    "education": [
+      {
+        "index": 1,
+        "title": "Millersville University"
+      }
+    ],
+    "professionalExperience": [
+      {
+        "index": 1,
+        "title": "Travelers Insurance"
+      },
+      {
+        "index": 2,
+        "title": "Members 1st"
+      },
+      {
+        "index": 3,
+        "title": "Select Medical"
+      }
+    ],
+    "personalProjects": [
+      "UML Editor",
+      "Resume Webpage (Legacy)",
+      "ASP.NET with C#"
+    ]
+  },
+  "email": "bankert.brandon@gmail.com",
+  "phone": "7173576785"
+}

@@ -3,6 +3,7 @@ import React from "react";
 import { useGetDashboardInformationQuery } from "../shared/services/informationApi";
 import "./dashboard.scss";
 import DashboardLoader from "../components/shimmerLoaders/dashboardLoader";
+import { Timeline, TimelineItem, TimelineOppositeContent, TimelineSeparator, TimelineDot, TimelineConnector, TimelineContent, timelineOppositeContentClasses } from "@mui/lab";
 
 const DescriptionCard = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -11,7 +12,7 @@ const DescriptionCard = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const Dashboard = () => {
+const HomeDashboard = () => {
   const { data, isLoading, isError } = useGetDashboardInformationQuery(null);
 
   return (
@@ -67,6 +68,67 @@ const Dashboard = () => {
               with just JavaScript, React, and CSS. Then to make the site available it was deployed manually to gh-pages. Now, it is built width
               React, TypeScript, SCSS, and is deployed automatically on PR completion through GitHub Actions. The site is also taking advantage of Redux for state
               management along with RTK Query to simulate http requests for dynamic content. This site is also tested with Jest, which are run in the actions.
+
+            <Typography component='h3' sx={{ fontSize: '1.5rem', mt: '1rem' }}>Timeline</Typography>
+            <Divider />
+            <Timeline 
+              nonce={undefined} 
+              onResize={undefined} 
+              onResizeCapture={undefined} 
+              sx={{
+                [`& .${timelineOppositeContentClasses.root}`]: {
+                  flex: 0.2,
+                } }}>
+              <TimelineItem>
+                <TimelineOppositeContent color="text.secondary">
+                  6/2020
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>Initial creation with create-react-app</TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent color="text.secondary">
+                  2/2021
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>Addition of lazy loading</TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent color="text.secondary">
+                  4/2022
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>Automated build and deployment with Github Actions</TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent color="text.secondary">
+                  7/2022
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>Integration with Redux/RTK Query, Jest Unit Tests, and Sass</TimelineContent>
+              </TimelineItem>
+              <TimelineItem>
+                <TimelineOppositeContent color="text.secondary">
+                  12/2022
+                </TimelineOppositeContent>
+                <TimelineSeparator>
+                  <TimelineDot />
+                </TimelineSeparator>
+                <TimelineContent>Rewrite of site to new look</TimelineContent>
+              </TimelineItem>
+            </Timeline>
         </DescriptionCard>
         <DescriptionCard
           sx={{
@@ -135,4 +197,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default HomeDashboard;

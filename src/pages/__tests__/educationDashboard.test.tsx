@@ -5,26 +5,33 @@ import { setupApiStore } from "../../testing-utils/api-store-utils";
 import { server } from '../../mocks/server';
 import { MemoryRouter } from "react-router";
 import { rest } from "msw";
-import HomeDashboard from '../homeDashboard';
-import { IDashboardInformation } from "../../shared/models/dashboardInformation";
+import EducationDashboard from '../educationDashboard';
+import { IEducationDashboardInformation } from "../../shared/models/educationDashboardInformation";
 
 
-describe('dashboard',() => {
+describe('educationDashboard',() => {
     const storeRef = setupApiStore(informationApi, {});
 
-    const data: IDashboardInformation = {
-        introduction: {
-            name: "Tom Test",
-            title: "Cool guy",
-            image: "my-image-path.png"
-          }
-    }
+    const data: IEducationDashboardInformation[] = [
+        {
+            id: 1,
+            name: 'university',
+            gpa: '100',
+            degree: 'cool degree',
+            relevantCourses: [
+                {
+                    id: 1,
+                    title: 'my relevant course'
+                }
+            ]
+        }
+    ]
     
     describe('when the fetch returns an error', () => {
         it('displays the error message',async () => {
             server.use(
                 rest.get(
-                    '/react-resume/data/dashboardData.json',
+                    '/react-resume/data/educationData.json',
                 (req,res,ctx) => {
                     return res(ctx.status(500),ctx.json({ message: 'Internal Server Error' }))
                 })
@@ -32,66 +39,64 @@ describe('dashboard',() => {
 
             render(
                 <MemoryRouter>
-                <HomeDashboard />
+                <EducationDashboard />
                 </MemoryRouter>, { wrapper: storeRef.wrapper });
 
             await waitFor(() => {
-                expect(screen.queryByText(/Something went wrong loading the dashboard/i)).toBeInTheDocument();
+                expect(screen.queryByText(/Something went wrong loading the education information/i)).toBeInTheDocument();
             })
             
         })
+        
     })
 
     describe('when the fetch returns successfully', () => {
         beforeAll(() => {
             server.use(
                 rest.get(
-                    '/react-resume/data/dashboardData.json',
+                    '/react-resume/data/educationData.json',
                 (req,res,ctx) => {
                     return res(ctx.status(200),ctx.json(data))
                 })
             );
         })
 
-        it('displays the name',async () => {
-            render(
-                <MemoryRouter>
-                    <HomeDashboard />
-                </MemoryRouter>, { wrapper: storeRef.wrapper });
 
-            await waitFor(() => {
-                expect(screen.queryByText(/Tom Test/i)).toBeInTheDocument();
-            })
-            
-        });
-
-        it('displays the title',async () => {
+        it('displays the school name',async () => {
 
             render(
                 <MemoryRouter>
-                    <HomeDashboard />
+                <EducationDashboard />
                 </MemoryRouter>, { wrapper: storeRef.wrapper });
 
             await waitFor(() => {
-                expect(screen.queryByText(/Cool Guy/i)).toBeInTheDocument();
+                expect(screen.queryByText(/university/i)).toBeInTheDocument();
             })
-            
         });
 
-        it('displays the image',async () => {
+        it('displays the degree and gpa',async () => {
 
             render(
                 <MemoryRouter>
-                    <HomeDashboard />
+                <EducationDashboard />
                 </MemoryRouter>, { wrapper: storeRef.wrapper });
 
             await waitFor(() => {
-                const image = screen.queryByTestId(/image/i);
-                expect(image).toBeInTheDocument();
-                expect(image?.getAttribute('src')).toEqual('my-image-path.png')
+                expect(screen.queryByText(/cool degree - GPA: 100/i)).toBeInTheDocument();
             })
-            
-        });
+        })
+
+        it('displays the relevant courses',async () => {
+
+            render(
+                <MemoryRouter>
+                <EducationDashboard />
+                </MemoryRouter>, { wrapper: storeRef.wrapper });
+
+            await waitFor(() => {
+                expect(screen.queryByText(/cool degree - GPA: 100/i)).toBeInTheDocument();
+            })
+        })
     })
     
 })

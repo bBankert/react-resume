@@ -91,35 +91,57 @@ const Navigation = () => {
                 <ListSubheader>Professional Experience</ListSubheader>
                 {data.navLinks.professionalExperience.map((experience: INavLink) => (
                   <ListItem
-                    key={`${experience.title}-${experience.index}`}
+                    key={`${experience.title}-${experience.id}`}
                     sx={{
                       paddingLeft: "1.5rem",
                     }}
                   >
                     <Link 
                       component={RouterLink}
-                      color="inherit"
-                      to={`/experience/${experience.index}`}>
+                      color='inherit'
+                      to={`/experience/${experience.id}`}>
                         {experience.title}
                       </Link>
                   </ListItem>
                 ))}
               </ul>
             </li>
-            <ListItem>
+            <li>
+              <ul>
+                <ListSubheader>Dashboards</ListSubheader>
+                {
+                  data.navLinks.dashboardLinks.map((dashboardLink) => (
+                    <ListItem
+                    key={`${dashboardLink.title}-${dashboardLink.id}`}
+                    sx={{
+                      paddingLeft: "1.5rem",
+                    }}
+                  >
+                    <Link 
+                    color='inherit' 
+                    component={RouterLink} 
+                    to={dashboardLink.dashboardRoute} >
+                      {dashboardLink.title}
+                    </Link>
+                  </ListItem>
+                  ))
+                }
+              </ul>
+            </li>
+            <ListItem sx={{ mt: '1rem' }}>
               <Grid container direction='row' justifyContent='space-between'>
                 <Grid item>
-                  <Link aria-label='Visit my github' href='http://www.github.com/bBankert' target='_blank' rel='noopener' >
+                  <Link color='inherit' aria-label='Visit my github' href='http://www.github.com/bBankert' target='_blank' rel='noopener' >
                     <GitHubIcon />
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link aria-label='Email me' href='mailto:bankert.brandon@gmail.com' target='_blank' rel='noopener'>
+                  <Link color='inherit' aria-label='Email me' href='mailto:bankert.brandon@gmail.com' target='_blank' rel='noopener'>
                     <EmailIcon />
                   </Link>
                 </Grid>
                 <Grid item>
-                  <Link aria-label='Download a copy of my resume' href={window.location.origin + '/react-resume/documents/Resume.pdf'} download>
+                  <Link color='inherit' aria-label='Download a copy of my resume' href={window.location.origin + '/react-resume/documents/Resume.pdf'} download>
                     <DownloadIcon />
                   </Link>
                 </Grid>

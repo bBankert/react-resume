@@ -1,4 +1,4 @@
 export interface INavLink {
-    index: number,
+    id: number,
     title: string
 }

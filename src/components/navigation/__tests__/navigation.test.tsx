@@ -17,24 +17,13 @@ describe('navigation',() => {
 
     const data: ICommonInformation = {
         navLinks: {
-            education: [
-                {
-                    index: 1,
-                    title: "School 1"
-                }
-            ],
             professionalExperience: [
                 {
-                    index: 1,
+                    id: 1,
                     title: "Work 1"
                 },
             ],
-            personalProjects: [
-                {
-                    index: 1,
-                    title: "Project 1"
-                },
-            ]
+            dashboardLinks: []
         },
         email: "test@email.com",
         phone: "1111111"

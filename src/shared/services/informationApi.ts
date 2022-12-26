@@ -1,7 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { ICommonInformation } from "../models/commonInformation";
 import { IDashboardInformation } from "../models/dashboardInformation";
+import { IEducationDashboardInformation } from "../models/educationDashboardInformation";
 import { IProfessionalInformation } from "../models/professionalInformation";
+import { IProjectDashboardInformation } from "../models/projectDashboardInformation";
 
 // Define a service using a base URL and expected endpoints
 export const informationApi = createApi({
@@ -9,13 +11,19 @@ export const informationApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "/" }),
   endpoints: (builder) => ({
     getDashboardInformation: builder.query<IDashboardInformation, null>({
-      query: () => `/react-resume/data/dashboard.json`,
+      query: () => `/react-resume/data/dashboardData.json`,
     }),
     getCommonInformation: builder.query<ICommonInformation, null>({
       query: () =>  `/react-resume/data/commonData.json`,
     }),
     getProfessionalInformation: builder.query<IProfessionalInformation[],null>({
       query: () =>  `/react-resume/data/professionalData.json`,
+    }),
+    getProjectInformation: builder.query<IProjectDashboardInformation,null>({
+      query: () =>  `/react-resume/data/projectData.json`,
+    }),
+    getEducationInformation: builder.query<IEducationDashboardInformation[],null>({
+      query: () =>  `/react-resume/data/educationData.json`,
     })
   }),
 });
@@ -25,5 +33,7 @@ export const informationApi = createApi({
 export const {
   useGetDashboardInformationQuery,
   useGetCommonInformationQuery,
-  useGetProfessionalInformationQuery
+  useGetProfessionalInformationQuery,
+  useGetProjectInformationQuery,
+  useGetEducationInformationQuery
 } = informationApi;

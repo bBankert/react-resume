@@ -58,7 +58,7 @@ describe('professionalExperienceDetail',() => {
     })
 
     describe('when the fetch returns successfully', () => {
-        it('displays the company name',async () => {
+        beforeAll(() => {
             server.use(
                 rest.get(
                     '/react-resume/data/professionalData.json',
@@ -66,6 +66,9 @@ describe('professionalExperienceDetail',() => {
                     return res(ctx.status(200),ctx.json(data))
                 })
             );
+        })
+
+        it('displays the company name',async () => {
 
             render(
                 <MemoryRouter initialEntries={['/explore/1']}>
@@ -81,13 +84,6 @@ describe('professionalExperienceDetail',() => {
         });
 
         it('should display the title',async () => {
-            server.use(
-                rest.get(
-                    '/react-resume/data/professionalData.json',
-                (req,res,ctx) => {
-                    return res(ctx.status(200),ctx.json(data))
-                })
-            );
 
             render(
                 <MemoryRouter initialEntries={['/explore/1']}>
@@ -103,13 +99,6 @@ describe('professionalExperienceDetail',() => {
         });
 
         it('should render all the details',async () => {
-            server.use(
-                rest.get(
-                    '/react-resume/data/professionalData.json',
-                (req,res,ctx) => {
-                    return res(ctx.status(200),ctx.json(data))
-                })
-            );
 
             render(
                 <MemoryRouter initialEntries={['/explore/1']}>
@@ -127,13 +116,6 @@ describe('professionalExperienceDetail',() => {
         });
 
         it('should render all the technology links',async () => {
-            server.use(
-                rest.get(
-                    '/react-resume/data/professionalData.json',
-                (req,res,ctx) => {
-                    return res(ctx.status(200),ctx.json(data))
-                })
-            );
 
             render(
                 <MemoryRouter initialEntries={['/explore/1']}>

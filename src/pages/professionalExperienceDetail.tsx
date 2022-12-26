@@ -19,7 +19,6 @@ const ProfessionalExprienceDetail = () => {
   const {
     isLoading,
     isError,
-    data
   } = useGetProfessionalInformationQuery(null);
 
   const {

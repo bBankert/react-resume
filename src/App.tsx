@@ -9,8 +9,10 @@ import { useSelector } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Error from './pages/error';
 import MainContent from "./containers/mainContent/mainContent";
-import Dashboard from "./pages/dashboard";
 import ProfessionalExprienceDetail from "./pages/professionalExperienceDetail";
+import HomeDashboard from "./pages/homeDashboard";
+import ProjectDashboard from "./pages/projectDashboard";
+import EducationDashboard from "./pages/educationDashboard";
 
 const App = () => {
   //system preference color scheme
@@ -38,11 +40,19 @@ const App = () => {
       children: [
         {
           path: '/',
-          element: <Dashboard />,
+          element: <HomeDashboard />,
         },
         {
           path: '/experience/:professionalExperienceId',
           element: <ProfessionalExprienceDetail />
+        },
+        {
+          path: '/projects',
+          element: <ProjectDashboard />
+        },
+        {
+          path: '/education',
+          element: <EducationDashboard />
         }
       ]
     }

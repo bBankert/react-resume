@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, CssBaseline, Grid, IconButton, Link, List, ListItem, ListItemAvatar, ListItemText, ListSubheader, Paper, Toolbar, Typography } from "@mui/material";
+import { AppBar, CssBaseline, Grid, Link, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import FooterLoader from "../../components/shimmerLoaders/footerLoader";
 import { useGetCommonInformationQuery } from "../../shared/services/informationApi";

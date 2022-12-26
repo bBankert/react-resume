@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
-import { AiOutlineMail, AiFillGithub, AiOutlineDownload } from "react-icons/ai";
+import React, { useState } from "react";
 import "./navigation.scss";
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -18,9 +17,8 @@ import DownloadIcon from '@mui/icons-material/Download';
 import {
   useGetCommonInformationQuery,
 } from "../../shared/services/informationApi";
-import { Grid, ListSubheader } from "@mui/material";
+import { Grid, ListSubheader,Link } from "@mui/material";
 import NavigationLoader from "../shimmerLoaders/navigationLoader";
-import Link from "@mui/material/Link/Link";
 import { Link as RouterLink } from 'react-router-dom';
 import { INavLink } from "../../shared/models/navLink";
 

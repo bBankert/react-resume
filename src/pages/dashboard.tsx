@@ -33,7 +33,7 @@ const Dashboard = () => {
             display='flex'
             justifyContent='center'
             >
-         <img id="self-portrait" src={data.introduction.image} alt="Brandon Bankert"/>
+         <img id="self-portrait" data-testid='image' src={data.introduction.image} alt="Brandon Bankert"/>
         </Grid>
         <Grid
             item

@@ -1,38 +1,61 @@
-import React,{Suspense,lazy} from 'react';
-import './App.css';
-//has to be synchronous since this is the fallback component
-import Loading from './components/loading/loading';
+import React from "react";
+import "./App.css";
 
-import { useGetInformationQuery } from './slices/api-slice';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
 
-const Header = lazy(() => import('./containers/header'));
-const Content = lazy(() => import('./containers/content'));
-const Footer = lazy(() => import('./containers/footer/footer'));
+import { useSelector } from "react-redux";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Error from './pages/error';
+import MainContent from "./containers/mainContent/mainContent";
+import Dashboard from "./pages/dashboard";
+import ProfessionalExprienceDetail from "./pages/professionalExperienceDetail";
 
 const App = () => {
+  //system preference color scheme
+  const stateTheme = useSelector((state: any) => state.settings.theme);
+  const systemDefault = useMediaQuery("(prefers-color-scheme: dark)")
+    ? "dark"
+    : "light";
 
-  const { data, isLoading, isError } = useGetInformationQuery(null);
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          //default to system default, otherwise toggle based on state
+          mode: stateTheme ? stateTheme : systemDefault,
+        },
+      }),
+    [systemDefault, stateTheme]
+  );
 
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <MainContent />,
+      errorElement: <Error />,
+      children: [
+        {
+          path: '/',
+          element: <Dashboard />,
+        },
+        {
+          path: '/experience/:professionalExperienceId',
+          element: <ProfessionalExprienceDetail />
+        }
+      ]
+    }
+  ],
+  {
+    basename: '/react-resume'
+  })
 
   return (
-    <React.Fragment>
-      <Suspense fallback={<Loading/>}>
-        {isLoading ?
-          <Loading /> :
-          isError ?
-          <p>I am sorry, it looks like an error occurred...</p> :
-          <React.Fragment>
-            <Header navigation={data.navigation}/>
-            <Content 
-              content={data.content} 
-              introduction={data.introduction}/>
-            <Footer 
-              email={data.footer.email} 
-              phone={data.footer.phone} />
-          </React.Fragment> 
-        }
-      </Suspense>
-    </React.Fragment>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <RouterProvider router={router} />
+    </ThemeProvider>
   );
 };
 

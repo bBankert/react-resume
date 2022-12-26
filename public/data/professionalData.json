@@ -1,0 +1,109 @@
+
+    [
+        {
+            "id": 1,
+            "company": "Travelers Insurance",
+            "title": "Tech Lead",
+            "details": [
+                "Develop new features using React Native for both Android and IOS",
+                "Create and modify AWS Lambdas for use by both the native app and web app using Node.js and Mongo DB",
+                "Act as point of contact and mentor junior developers",
+                "Administer code reviews for other developers",
+                "Lead committees for the circle/department"
+            ],
+            "technologies": [
+                {
+                    "name": "React Native",
+                    "link": "https://reactnative.dev/"
+                },
+                {
+                    "name": "React",
+                    "link": "https://reactjs.org/"
+                },
+                {
+                    "name": "Redux",
+                    "link": "https://redux.js.org/"
+                },
+                {
+                    "name": "Node.js",
+                    "link": "https://nodejs.org/en/"
+                },
+                {
+                    "name": "AWS",
+                    "link": "https://aws.amazon.com/"
+                },
+                {
+                    "name": "Mongo DB",
+                    "link": "https://www.mongodb.com/"
+                },
+                {
+                    "name": "Redis",
+                    "link": "https://redis.io/"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "company": "Members 1st Federal Credit Union",
+            "title": "Senior Software Engineer",
+            "details": [
+                "Setup CI/CD through Azure DevOps pipelines",
+                "Upgraded existing applications to .NET 6 fom .NET Framework and .NET Core",
+                "Bug fixes in the Native Android App",
+                "Containerized applications through Docker and Devcontainers",
+                "Moved applications from internal into Azure"
+            ],
+            "technologies": [
+                {
+                    "name": ".NET (6 and prior)",
+                    "link": "https://learn.microsoft.com/en-us/dotnet/core/introduction"
+                },
+                {
+                    "name": "SQL Server",
+                    "link": "https://www.microsoft.com/en-us/sql-server/sql-server-2019"
+                },
+                {
+                    "name": "Angular",
+                    "link": "https://angular.io/"
+                },
+                {
+                    "name": "Docker",
+                    "link": "https://www.docker.com/"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "company": "Select Medical",
+            "title": "Software Engineer II",
+            "details": [
+                "Developed and enhance web applications written in ASP.NET MVC and Sitecore",
+                "Develop and Enhance the API for form submissions",
+                "Write SQL queries for views and stored procdures for the API to execute",
+                "Worked with team members in a Agile methodology",
+                "Write Powershell powershell for automation of back-end tasks in Sitecore",
+                "Write SSIS Packages automate ETL tasks",
+                "Use TFS for source control"
+            ],
+            "technologies": [
+                {
+                    "name": ".NET",
+                    "link": "https://learn.microsoft.com/en-us/dotnet/core/introduction"
+                },
+                {
+                    "name": "SQL Server",
+                    "link": "https://www.microsoft.com/en-us/sql-server/sql-server-2019"
+                },
+                {
+                    "name": "jQuery",
+                    "link": "https://jquery.com/"
+                },
+                {
+                    "name": "Sitecore",
+                    "link": "https://www.sitecore.com/"
+                }
+            ]
+        }
+    ]
+
+  

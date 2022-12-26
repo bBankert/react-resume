@@ -1,116 +1,107 @@
 {
-	"navigation": ["Education","Personal Projects","Professional Experience"],
-	"introduction":{"name":"Brandon Bankert","title":"Full Stack Developer","image":"/react-resume/images/face.png"},
-	"content" : 
-	[
-		{
-			"header":"Education",
-			"subsections":
-			[
-				{
-					"subheading":"Millersville University",
-					"details":
-					[
-						"Graduated: December 2019",
-						"GPA: 3.92",
-						"Bachelors of Science in Computer Science"
-					],
-					"link":""
-				}
-			]
-		},
-		{
-			"header" : "Personal Projects",
-			"subsections":
-			[
-				{
-					"subheading":"UML Editor",
-					"details":
-					[
-						"Developed a client side UML editor with Angular and Typescript",
-						"Worked with team members in a Agile methodology",
-						"Write Unit Tests for regression testing with Travis CI/CD",
-						"Use GitHub for source control"
-					],
-					"link":"https://gwca-uml.firebaseapp.com"
-				},
-				{
-					"subheading": "Resume Webpage (Legacy)",
-					"details":
-					[
-						"Use Javascript to develop functions for elements and the sidebar",
-						"Use Photoshop to create images for the background",
-						"Made the webpage mobile responsive"
-					],
-					"link":"https://bbankert.github.io"
-				},
-				{
-					"subheading":"ASP.NET with C#",
-					"details":
-					[
-						"Used session data to be able to keep the user data globally accessible for the duration of the application",
-						"Added authentication as well as an admin account to access all accounts",
-						"Used a code-first database to store recipes the users created"
-					],
-					"link":"https://github.com/bBankert/.NET/"
-				}
-
-			]
-		},
-		{
-			"header": "Professional Experience",
-			"subsections":
-			[
-				{
-					"subheading": "Senior Software Engineer : Members 1st Federal Credit Union",
-					"details":
-					[
-						"Setup CI/CD through Azure DevOps pipelines",
-						"Upgraded existing applications to .NET 6 fom .NET Framework and .NET Core",
-						"Bug fixes in the Native Android App",
-						"Containerized applications through Docker and Devcontainers",
-						"Moved applications from internal into Azure"
-					],
-					"link":""
-				},
-				{
-					"subheading": "Full Stack Devleloper : Select Medical",
-					"details":
-					[
-						"Developed and enhance web applications written in ASP.NET MVC and Sitecore",
-						"Develop and Enhance the API for form submissions",
-						"Write SQL queries for views and stored procdures for the API to execute",
-						"Worked with team members in a Agile methodology",
-						"Write Powershell powershell for automation of back-end tasks in Sitecore",
-						"Write SSIS Packages automate ETL tasks",
-						"Use TFS for source control"
-					],
-					"link":""
-				},
-				{
-					"subheading": "Web Developer Intern : Highmark Health Solutions",
-					"details":
-					[
-						"Developed a reference site for the company's intranet using Angular",
-						"Adjusted the site to be mobile responsive and 508 compliant with Bootstrap",
-						"Developed using an agile methodology",
-						"Created documentation for future developers to reference for both the site and Angular",
-						"Assisted other interns with Angular questions"
-					],
-					"link":""
-				},
-				{
-					"subheading":"IT Helpdesk Intern : University of Pennsylvania",
-					"details":
-					[
-						"Acted as point of contact for all techincal issues both students and faculty had",
-						"Assisted higher level IT members provide solutions for more complex issues",
-						"Imaged and deployed hardware for new faculty members",
-						"Created documentation for software usage that met the college's standards"
-					]
-				}
-			]
-		}
-	],
-	"footer": {"email":"bankert.brandon@gmail.com","phone":"7173576785"}
+  "navigation": ["Education", "Personal Projects", "Professional Experience"],
+  "introduction": {
+    "name": "Brandon Bankert",
+    "title": "Full Stack Developer",
+    "image": "/react-resume/images/face.png"
+  },
+  "content": [
+    {
+      "header": "Education",
+      "subsections": [
+        {
+          "subheading": "Millersville University",
+          "details": [
+            "Graduated: December 2019",
+            "GPA: 3.92",
+            "Bachelors of Science in Computer Science"
+          ],
+          "link": ""
+        }
+      ]
+    },
+    {
+      "header": "Personal Projects",
+      "subsections": [
+        {
+          "subheading": "UML Editor",
+          "details": [
+            "Developed a client side UML editor with Angular and Typescript",
+            "Worked with team members in a Agile methodology",
+            "Write Unit Tests for regression testing with Travis CI/CD",
+            "Use GitHub for source control"
+          ],
+          "link": "https://gwca-uml.firebaseapp.com"
+        },
+        {
+          "subheading": "Resume Webpage (Legacy)",
+          "details": [
+            "Use Javascript to develop functions for elements and the sidebar",
+            "Use Photoshop to create images for the background",
+            "Made the webpage mobile responsive"
+          ],
+          "link": "https://bbankert.github.io"
+        },
+        {
+          "subheading": "ASP.NET with C#",
+          "details": [
+            "Used session data to be able to keep the user data globally accessible for the duration of the application",
+            "Added authentication as well as an admin account to access all accounts",
+            "Used a code-first database to store recipes the users created"
+          ],
+          "link": "https://github.com/bBankert/.NET/"
+        }
+      ]
+    },
+    {
+      "header": "Professional Experience",
+      "subsections": [
+        {
+          "subheading": "Senior Software Engineer : Members 1st Federal Credit Union",
+          "details": [
+            "Setup CI/CD through Azure DevOps pipelines",
+            "Upgraded existing applications to .NET 6 fom .NET Framework and .NET Core",
+            "Bug fixes in the Native Android App",
+            "Containerized applications through Docker and Devcontainers",
+            "Moved applications from internal into Azure"
+          ],
+          "link": ""
+        },
+        {
+          "subheading": "Full Stack Devleloper : Select Medical",
+          "details": [
+            "Developed and enhance web applications written in ASP.NET MVC and Sitecore",
+            "Develop and Enhance the API for form submissions",
+            "Write SQL queries for views and stored procdures for the API to execute",
+            "Worked with team members in a Agile methodology",
+            "Write Powershell powershell for automation of back-end tasks in Sitecore",
+            "Write SSIS Packages automate ETL tasks",
+            "Use TFS for source control"
+          ],
+          "link": ""
+        },
+        {
+          "subheading": "Web Developer Intern : Highmark Health Solutions",
+          "details": [
+            "Developed a reference site for the company's intranet using Angular",
+            "Adjusted the site to be mobile responsive and 508 compliant with Bootstrap",
+            "Developed using an agile methodology",
+            "Created documentation for future developers to reference for both the site and Angular",
+            "Assisted other interns with Angular questions"
+          ],
+          "link": ""
+        },
+        {
+          "subheading": "IT Helpdesk Intern : University of Pennsylvania",
+          "details": [
+            "Acted as point of contact for all techincal issues both students and faculty had",
+            "Assisted higher level IT members provide solutions for more complex issues",
+            "Imaged and deployed hardware for new faculty members",
+            "Created documentation for software usage that met the college's standards"
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": { "email": "bankert.brandon@gmail.com", "phone": "7173576785" }
 }

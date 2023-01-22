@@ -41,14 +41,22 @@ const Navigation = () => {
     setOpen(!open);
   };
 
+  const container = !!window ? window.document.body : undefined;
+
 
   return (
-    <Box sx={{ display: "flex" }}>
+    <Box 
+      sx={{ display: "flex" }}
+    >
       <CssBaseline />
       <AppBar
         open={open}
         handleToggleDrawer={handleToggleDrawer}
-        width={maxDrawerWidth}
+        position="fixed"
+        sx={{
+          width: { sm: `calc(100% - ${maxDrawerWidth}px)` },
+          ml: { sm: `${maxDrawerWidth}px` },
+        }}
       />
       <Drawer
         sx={{
@@ -59,12 +67,19 @@ const Navigation = () => {
             boxSizing: "border-box",
           },
         }}
-        variant="persistent"
+        container={container}
+        onClose={handleToggleDrawer}
+        variant="temporary"
         anchor="left"
         open={open}
+        ModalProps={{
+          keepMounted: true, // Better open performance on mobile.
+        }}
       >
         <DrawerHeader sx={{ justifyContent: 'space-between' }}>
-          <IconButton  component={RouterLink} to='/'>
+          <IconButton  
+            component={RouterLink} to='/'
+            onClick={handleToggleDrawer}>
             <HomeIcon />
           </IconButton>
           <IconButton onClick={handleToggleDrawer}>
@@ -99,7 +114,8 @@ const Navigation = () => {
                     <Link 
                       component={RouterLink}
                       color='inherit'
-                      to={`/experience/${experience.id}`}>
+                      to={`/experience/${experience.id}`}
+                      onClick={handleToggleDrawer}>
                         {experience.title}
                       </Link>
                   </ListItem>
@@ -120,7 +136,8 @@ const Navigation = () => {
                     <Link 
                     color='inherit' 
                     component={RouterLink} 
-                    to={dashboardLink.dashboardRoute} >
+                    to={dashboardLink.dashboardRoute} 
+                    onClick={handleToggleDrawer}>
                       {dashboardLink.title}
                     </Link>
                   </ListItem>

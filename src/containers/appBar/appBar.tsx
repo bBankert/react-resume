@@ -16,7 +16,7 @@ interface IAppBarBaseProps extends MuiAppBarProps {
 }
 
 interface IAppBarProps extends IAppBarBaseProps {
-  handleToggleDrawer(): any;
+  handleToggleDrawer?(): any;
 }
 
 const AppBarBase = styled(MuiAppBar, {
